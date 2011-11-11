@@ -1,0 +1,20 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: 1
+  is_open: true
+  interviewer_text: 'interviewer text'
+  interviewer_comments: 'interviewer comments'
+  interviewer_seen_last_candidate_text: false
+  candidate_text: 'candidate text'
+  candidate_seen_last_interviewer_text: false
+
+two:
+  code: 2
+  is_open: false
+  interviewer_text: 'some text'
+  interviewer_comments: 'very good'
+  interviewer_seen_last_candidate_text: true
+  candidate_text: 'blah blah'
+  candidate_seen_last_interviewer_text: true
+

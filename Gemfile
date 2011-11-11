@@ -31,3 +31,11 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
+
+group :development, :test do
+  gem 'autotest'
+  gem 'autotest-rails'
+#  gem 'ZenTest'
+  gem 'test_notifier'
+end
+

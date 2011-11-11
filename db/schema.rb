@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110220925) do
+ActiveRecord::Schema.define(:version => 20111111152527) do
+
+  create_table "interview_sessions", :force => true do |t|
+    t.integer  "code"
+    t.boolean  "is_open"
+    t.text     "interviewer_text"
+    t.text     "interviewer_comments"
+    t.boolean  "interviewer_seen_last_candidate_text"
+    t.text     "candidate_text"
+    t.boolean  "candidate_seen_last_interviewer_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"

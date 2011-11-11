@@ -1,5 +1,9 @@
 Ror::Application.routes.draw do
 
+  get "interviewer/index"
+
+  get "interviewer/show"
+
   resources :users
 
   get "home/index"
