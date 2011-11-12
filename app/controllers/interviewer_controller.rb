@@ -1,4 +1,5 @@
 class InterviewerController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, :with => :interview_session_not_found
 
   # GET /interviewer
   def index
@@ -8,7 +9,7 @@ class InterviewerController < ApplicationController
 
   # GET /interviewer/:id
   def show
-    # resume session
+	@isession = InterviewSession.find(params[:id])
   end
 
   # POST /interviewer
@@ -21,4 +22,11 @@ class InterviewerController < ApplicationController
     
   end
 
+
+ 
+  private
+ 
+  def interview_session_not_found
+    render :text => "Unknown interview session", :status => 500
+  end
 end
